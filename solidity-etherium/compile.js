@@ -1,1 +1,0 @@
-require('./contracts/Inbox.sol');
