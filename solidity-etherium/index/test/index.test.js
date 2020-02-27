@@ -16,6 +16,10 @@ beforeEach(async ()=>{
     })
 describe('Inbox',()=>{
     it('deploys a contract',()=>{
-        console.log(inbox)
+        assert.ok(inbox.options.address);//assert.ok checks if the value is a real value
     });
+    it('has a default message',async ()=>{
+        var msg = await inbox.methods.message().call();
+        assert.equal(msg,'hii');
+    })
 })
